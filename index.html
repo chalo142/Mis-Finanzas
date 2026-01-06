@@ -67,15 +67,19 @@
                         <div class="col-md-4">
                             <label class="form-label small fw-bold">Categoría</label>
                             <select id="categoria" class="form-select">
-                                <option value="Sueldo">💵 Sueldo/Ingreso</option>
-                                <option value="Comida">🍎 Comida</option>
+                                <option value="Sueldo">💰 Sueldo/Ingreso</option>
+                                <option value="Comida">🍔 Comida</option>
                                 <option value="Transporte">🚗 Transporte</option>
                                 <option value="Vivienda">🏠 Vivienda</option>
-                                <option value="Entretenimiento">🎬 Ocio</option>
+                                <option value="Entretenimiento">🎮 Ocio</option>
                                 <option value="Medicamentos">💊 Salud</option>
+                                <option value="Servicios">🚰 Servicios (Agua/Luz)</option>
+                                <option value="Almacenamiento">📦 Almacenamiento</option>
+                                <option value="Cursos">📚 Cursos/Seminarios</option>
+                                <option value="Herramientas">🛠️ Herramientas</option>
                                 <option value="Vestimenta">👕 Vestimenta</option>
                                 <option value="Viajes">✈️ Viajes</option>
-                                <option value="Otros">📦 Otros</option>
+                                <option value="Otros">✨ Otros</option>
                             </select>
                         </div>
                         <div class="col-12 mt-3">
@@ -121,18 +125,21 @@
 
 
     // Configuración visual
-    const configCategorias = {
-        'Sueldo': { icon: 'fa-money-bill-trend-up', color: 'bg-success text-white', colorHex: '#198754' },
-        'Comida': { icon: 'fa-utensils', color: 'bg-warning text-dark', colorHex: '#ffc107' },
-        'Transporte': { icon: 'fa-car', color: 'bg-info text-white', colorHex: '#eccaf0' },
-        'Vivienda': { icon: 'fa-house', color: 'bg-danger text-white', colorHex: '#dc3545' },
-        'Entretenimiento': { icon: 'fa-gamepad', color: 'bg-primary text-white', colorHex: '#0d6efd' },
-        'Medicamentos': { icon: 'fa-heart-pulse', color: 'bg-info text-white', colorHex: '#0dcaf0' },
-        'Vestimenta': { icon: 'fa-shirt', color: 'bg-secondary text-white', colorHex: '#6c757d' },
-        'Viajes': { icon: 'fa-plane', color: 'bg-dark text-white', colorHex: '#6a2529' },
-        'Otros': { icon: 'fa-ellipsis', color: 'bg-light text-dark', colorHex: '#449955' }
+   const configCategorias = {
+    'Sueldo': { icon: '💰', color: 'bg-success text-white', colorHex: '#198754' },
+    'Comida': { icon: '🍔', color: 'bg-warning text-dark', colorHex: '#ffc107' },
+    'Transporte': { icon: '🚗', color: 'bg-info text-white', colorHex: '#0dcaf0' },
+    'Vivienda': { icon: '🏠', color: 'bg-danger text-white', colorHex: '#dc3545' },
+    'Entretenimiento': { icon: '🎮', color: 'bg-primary text-white', colorHex: '#0d6efd' },
+    'Medicamentos': { icon: '💊', color: 'bg-info text-white', colorHex: '#3377f0' },
+    'Servicios': { icon: '🚰', color: 'bg-primary text-white', colorHex: '#0d6efd' },
+    'Almacenamiento': { icon: '📦', color: 'bg-dark text-white', colorHex: '#212529' },
+    'Cursos': { icon: '📚', color: 'bg-info text-white', colorHex: '#0dcaf0' },
+    'Herramientas': { icon: '🛠️', color: 'bg-secondary text-white', colorHex: '#6c757d' },
+    'Vestimenta': { icon: '👕', color: 'bg-secondary text-white', colorHex: '#6c757d' },
+    'Viajes': { icon: '✈️', color: 'bg-dark text-white', colorHex: '#212529' },
+    'Otros': { icon: '✨', color: 'bg-light text-dark', colorHex: '#f8f9fa' }
     };
-
     let transacciones = JSON.parse(localStorage.getItem('transacciones')) || [];
     let miChart;
 
@@ -251,4 +258,5 @@
     actualizarIU();
 </script>
 </body>
+
 </html>
